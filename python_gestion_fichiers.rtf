@@ -1,0 +1,250 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fmodern\fcharset0 CourierNewPS-BoldMT;\f1\fmodern\fcharset0 CourierNewPSMT;\f2\fnil\fcharset0 Calibri;
+\f3\fnil\fcharset0 Calibri-Bold;\f4\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green133\blue204;\red0\green0\blue0;\red255\green38\blue0;
+\red0\green190\blue243;\red209\green110\blue19;\red100\green145\blue69;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c52218\c79866;\csgenericrgb\c0\c0\c0;\csgenericrgb\c100000\c14913\c0;
+\csgenericrgb\c0\c74554\c95407;\csgenericrgb\c81778\c42997\c7315;\csgenericrgb\c39330\c56803\c26868;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs20 \cf2 from
+\f1\b0  \cf3 os 
+\f0\b \cf2 import
+\f1\b0  \cf3 listdir\
+
+\f0\b \cf2 \
+f
+\f1\b0 o\cf3 r nam
+\f0\b \cf2 e 
+\f1\b0 i\cf3 n listd\cf4 i\cf3 r\cf5 ( "C:\\\\Tem\cf3 p\cf4 " \cf3 ):\
+    pr\cf4 i\cf3 nt( na\cf4 m
+\f2\fs22 \cf3 e 
+\f3\b \cf2 )\
+
+\f2\b0 \
+\cf3 fro
+\f3\b \cf2 m os i
+\f2\b0 m\cf3 port w
+\f3\b \cf2 alk
+\f2\b0 \cf3 \
+\
+f\cf4 o\cf3 r roo\cf4 t\cf3 , dirs,
+\f3\b \cf2  f
+\f2\b0 i\cf3 les \cf4 i\cf3 n\cf5  walk( 'C:\cf4 \\\\\cf3 Temp', \cf4 t
+\f3\b \cf2 opdo
+\f2\b0 w\cf4 n=T\cf3 rue ):\
+ \cf4  \cf3   prin\cf4 t\cf3 ( root )\
+\cf4  \cf3    pri\cf4 n\cf3 t( dirs )\cf4 \
+\cf3     pri\cf4 n\cf3 t( files )\
+\cf5     print( '----------------------\cf3 -\cf4 -\cf3 -
+\f0\b\fs20 \cf2 -----
+\f1\b0 -\cf3 -' 
+\f0\b \cf2 )\
+\
+f
+\f1\b0 r\cf3 om os imp
+\f0\b \cf2 ort 
+\f1\b0 s\cf3 candir\cf4 \
+\cf5 \
+with scand\cf4 i\cf3 r
+\f0\b \cf2 ( 
+\f1\b0 "\cf3 C:\cf4 \\\cf3 \\Temp
+\f0\b \cf2 " )
+\f1\b0  \cf3 as it:
+\f0\b \cf2 \
+
+\f1\b0  \cf3   \cf4  \cf3 for entry in i\cf4 t\cf3 :\
+        p\cf4 r\cf3 i
+\f0\b\fs22 \cf2 nt( e
+\f1\b0 n\cf3 try
+\f0\b \cf2 .name 
+\f1\b0 )\cf3 \
+\
+from 
+\f0\b \cf2 os 
+\f1\b0 i\cf3 mport s\cf4 c\cf3 andir\
+\
+def \cf4 f\cf3 ilemap( pat\cf4 h,\cf3  acti
+\f0\b \cf2 on, 
+\f1\b0 i\cf3 s_targe\cf4 t\cf3  ):\
+ \cf4  \cf3  
+\f0\b \cf2  w
+\f1\b0 i\cf3 th\cf4  \cf3 scandir( 
+\f0\b \cf2 pat
+\f1\b0 h\cf3  ) as 
+\f0\b \cf2 it
+\f1\b0 :\cf3 \
+\cf4  \cf3        for en
+\f0\b \cf2 tr
+\f1\b0 y\cf3  in i\cf4 t\cf3 :\
+   \cf4    \cf3       if entry.is_dir():\
+          \cf4  \cf3      fi\cf4 l\cf3 emap( entry\cf4 .\cf3 path, action,
+\f0\b \cf2  is_
+\f1\b0 t\cf3 arget )\
+\cf4  \cf3        \cf4   \cf3   elif is_target( entry\cf4  \cf3 ):\
+   \cf4  \cf3  
+\f2  
+\f1        \cf4  \cf3  \cf5  action( e\cf4 n\cf3 try )\
+\
+f
+\f0\b \cf2 ilemap
+\f1\b0 (\cf3  "\cf4 c\cf3 :\\\\Tem\cf4 p"\cf3 ,\
+   \cf4    \cf3    lambda 
+\f0\b \cf2 e : pr
+\f1\b0 i\cf3 nt\cf4 (\cf3  e\cf4 .\cf3 name\cf4  \cf3 ),\
+ \cf4    \cf3      lam\cf4 b\cf3 d\cf5 a e : \cf4 e.n\cf3 a
+\f2 m
+\f1 e.lowe\cf4 r\cf3 ().
+\f0\b \cf2 end
+\f1\b0 s\cf3 with( ".py\cf4 "\cf3  ) )\
+\cf4 \
+c\cf3 ount 
+\f0\b \cf2 = 0\
+d
+\f1\b0 e\cf3 f count_file( en\cf4 tr\cf3 y ):\
+    g\cf4 l\cf3 o\cf5 bal count\cf4 \
+\cf3     count += 1\
+\
+fi\cf4 l\cf3 emap( "c:\\
+\f0\b \cf2 \\Temp"
+\f1\b0 ,\cf3 \
+\cf4  \cf3   \cf4  \cf3     \cf4  \cf3 count\cf4 _fi\cf3 le,\
+   \cf4  \cf3  \cf5     la\cf4 mbd\cf3 a e : \cf4 e\cf3 .name.l\cf4 o
+\f2 \cf3 wer
+\f0\b \cf2 ().en
+\f1\b0 d\cf3 swith( ".\cf4 p\cf3 y" ) 
+\f0\b \cf2 )\
+
+\f1\b0 p
+\f0\b \cf3 rint( co
+\f1\b0 \cf4 u\cf3 n\cf6 t )\
+\cf4 \
+\cf3 \
+class C\cf6 ount\cf4 F\cf3 ile:\
+  \cf4  \cf3  \cf7 d\cf3 ef __i\cf6 nit__( se\cf3 lf ):
+\f0\b \cf2 \
+ 
+\f1\b0  \cf3      \cf4  \cf3 s\cf6 elf._\cf4 _c\cf3 ount = 0
+\f0\b \cf2 \
+\
+   
+\f1\b0  \cf6 @pro\cf4 p\cf3 erty\
+    def
+\f0\b \cf2  co
+\f1\b0 u
+\f0\b \cf3 nt( self
+\f1\b0 \cf4  \cf3 )\cf6 :\
+ \cf4  \cf3       r\cf4 et\cf3 urn self.\cf6 __co\cf4 u\cf3 nt\
+\
+  \cf4   \cf3 d\cf7 e\cf3 f __ca
+\f0\b \cf2 ll_
+\f1\b0 _
+\f0\b \cf3 ( self,
+\f1\b0 \cf4  \cf3 e\cf6 ntry \cf4 ):\cf3 \
+       
+\f0\b \cf2  self.
+\f1\b0 _\cf5 _count += 1\
+\
+  \cf3   de\cf4 f\cf3  __str__( \cf4 se\cf3 lf ):\
+ \cf4  \cf3  \cf5      retur\cf4 n\cf3  F"\{self.__\cf4 c\cf3 ount\}"\
+\
+
+\f0\b \cf2 c = Co
+\f1\b0 u\cf3 nt\cf4 F\cf3 ile()\
+\cf4 f\cf3 ilema\cf4 p( \cf3 "c:\\\\Tem\cf4 p\cf3 "\cf5 ,\
+   \cf4    \cf3    c,\cf4 \
+\cf3    \cf4  
+\f2 \cf3    
+\f0\b \cf2   lamb
+\f1\b0 d\cf3 a \cf4 e\cf3  : e.na\cf4 m\cf3 e.low\cf4 er(\cf3 ).endswi\cf4 t\cf3 h\cf5 ( ".py\cf4 "
+\f2 \cf3  ) 
+\f0\b \cf2 )\
+
+\f1\b0 p\cf3 rint( c \cf4 )\
+\cf3 \
+\
+l\cf4 am\cf3 bda e : e.name.l\cf4 owe\cf3 r().\cf4 e\cf3 ndswi\cf4 th\cf3 (
+\f0\b \cf2  ".
+\f1\b0 p\cf3 y" )
+\f0\b \cf2 \
+
+\f1\b0 \cf3 \
+\
+de\cf4 f\cf3  endsw
+\f0\b \cf2 ith
+\f1\b0 (\cf3  *args ):\cf4 \
+\cf3     ext\cf4 en\cf3 sions = [ ext.\cf4 l\cf3 ower()\cf4  \cf3 for \cf4 e\cf3 xt in\cf4  a\cf3 rgs ]\
+\
+
+\f0\b \cf2    
+\f1\b0  \cf3 def 
+\f0\b \cf2 _i
+\f1\b0 s\cf3 _target( e\cf4 n\cf3 try ):\
+     
+\f0\b \cf2   
+\f1\b0  \cf3 name\cf4  \cf3 = entry.\cf4 n\cf3 ame.l\cf4 ow\cf3 er()\
+        for
+\f0\b \cf2  ext i
+\f1\b0 n
+\f0\b  ext
+\f1\b0 \cf3 ensions:
+\f0\b \cf2 \
+     
+\f1\b0  
+\f0\b      
+\f1\b0 \cf3  if na
+\f0\b \cf2 me.end
+\f1\b0 s\cf3 with( ext ):\
+ \cf4  \cf3           \cf4   \cf3   return\cf4  \cf3 T\cf5 rue\
+        return Fa\cf4 l\cf3 se\
+\
+    r\cf4 e\cf3 turn _is_target\
+\cf4 \
+\cf5 \
+c = \cf4 C\cf3 o\cf5 untFile\cf4 ()\cf3 \
+filem\cf4 a\cf3 p( \cf4 "\cf3 C:
+\f2 \\
+\f0\b\fs18 \cf2 \\Too
+\f1\b0 l\cf3 s\\\\Anacond\cf4 a\cf3 3",\
+      \cf4   \cf3  c,\
+
+\f0\b \cf2     
+\f1\b0  \cf3     endsw
+\f0\b \cf2 ith( "
+\f1\b0 .\cf3 py", ".tx
+\f0\b \cf2 t"
+\f1\b0  \cf3 ) \cf4 )\cf3 \
+print( c ) \
+\
+\
+def older_than( \cf4 d\cf3 ay_count ):\
+    fro\cf4 m\cf3  da\cf4 t\cf3 eti\cf4 me\cf3  import dat\cf4 et\cf3 im\cf4 e\cf3  as D\cf4 T\cf3 ,\cf4 \
+\cf3    \cf4  \cf3            \cf4  \cf3          t\cf4 i\cf3 medelta\cf4 ,\cf3  timezone\
+    t\cf4 o\cf3 day = 
+\f0\b \cf2 DT.
+\f1\b0 n\cf3 ow()\
+    \cf4 e\cf3 poch = \cf4 DT\cf3 ( 1970, 1, 1 )\
+    ref\cf4  \cf3   = tim\cf4 e\cf3 delta( hou\cf4 r\cf3 s = day_c\cf4 o\cf3 unt * \cf4 2\cf3 4 )\cf4 \
+\
+\cf3     def _\cf4 i\cf3 s_target(
+\f0\b \cf2  entry
+\f1\b0  \cf4 )\cf3 :\
+    \cf4  \cf3    creation_dat\cf4 e = \cf3 epoch + ti
+\f0\b \cf2 medelt
+\f1\b0 a\cf3 ( seconds = entry.st\cf4 a\cf3 t\cf5 ().st_ctim\cf4 e\cf3  )\
+      
+\f0\b \cf2   retu
+\f1\b0 r\cf3 n\cf4  \cf3 ( today\cf4  \cf3 - \cf4 c\cf3 reati\cf4 on\cf3 _date ) >= ref\
+\
+  \cf4  \cf3  ret\cf4 urn\cf3  
+\f2\fs22 _is
+\f4\fs24 \cf0 _target\
+\
+\
+filemap( "C:\\\\Temp",\
+         lambda e: unlink( e.path ),\
+         older_than( 30 ) )\
+ \
+\
+}
